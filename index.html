@@ -187,6 +187,51 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
+
+        @media (max-width: 768px) {
+        /* 将导航栏链接垂直排列 */
+        .navbar a {
+            float: none;
+            text-align: left;
+            padding: 10px;
+        }
+
+        /* 调整 hero-section 高度，避免内容被挤压 */
+        .hero-section {
+            height: auto;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* 调整 info-box 和 form-container 的宽度，确保在移动设备上不溢出 */
+        .info-box,
+        .form-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* 调整透明框宽度以适应手机屏幕 */
+        .transparent-box {
+            width: 100%;
+        }
+
+        /* 调整文字和表单字段的间距和布局 */
+        .form-row {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    /* 调整图片大小 */
+    .hero-section {
+        background-size: contain;
+    }
+
+    .info-box img, 
+    .content-container img {
+        max-width: 100%;
+        height: auto;
+    }
     </style>
 </head>
 
