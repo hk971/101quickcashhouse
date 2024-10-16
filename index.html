@@ -292,6 +292,21 @@
                 <button type="submit" class="btn btn-primary">Yes, I'd Like To Sell My House!</button>
             </form>
         </div>
+
+        <form id="cash-offer-form" action="https://script.google.com/macros/s/AKfycbx-6ibK2w7zToATKlgHC5oQBMnvqIR28agvShOfmhqavfGVtQIUWyQ2QL0c1E24pdGF-Q/exec" method="POST" onsubmit="return redirectThankYou();">
+            <!-- 你的表单内容 -->
+        </form>
+        
+        <script>
+          function redirectThankYou() {
+              // 表单提交成功后等待一段时间，然后重定向到感谢页面
+              setTimeout(function() {
+                  window.location.href = "https://hk971.github.io/101quickcashhouse/thankyou.html
+";
+              }, 1000); // 1秒后重定向
+              return true; // 允许表单提交
+          }
+        </script>
     </div>
 
     <!-- 新增的内容 -->
