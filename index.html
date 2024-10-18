@@ -12,7 +12,6 @@
             background-color: #f4f4f4;
         }
 
-        /* 导航栏样式 */
         .navbar {
             background-color: #007bff;
             overflow: hidden;
@@ -33,7 +32,6 @@
             color: black;
         }
 
-        /* Hero区块的背景样式 */
         .hero-section {
             background-image: url('photo/Houses_background.png');
             background-size: cover;
@@ -48,48 +46,43 @@
             position: relative;
         }
 
-        /* 左右两部分靠近并放大 */
         .hero-section {
             display: flex;
             justify-content: center;
-            gap: 50px; /* 增加了距离使其更近 */
+            gap: 50px;
         }
 
-        /* 左侧信息框样式 */
         .info-box {
             background: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 30px;
             border-radius: 10px;
-            width: 500px; /* 放大宽度 */
+            width: 500px;
             line-height: 1.6;
         }
 
-        /* 加大和加粗 h2 */
         .info-box h2 {
-            font-size: 36px; /* 更大字体 */
-            font-weight: bold; /* 加粗 */
-            font-family: "Georgia", serif; /* 优雅衬线字体 */
+            font-size: 36px;
+            font-weight: bold;
+            font-family: "Georgia", serif;
         }
 
-        /* 加大和加粗 p 段落 */
         .info-box p {
-            font-size: 20px; /* 增加字体大小 */
-            font-weight: bold; /* 加粗 */
-            font-family: "Arial", sans-serif; /* 现代无衬线字体 */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial", sans-serif;
         }
 
         .info-box img {
-            width: 150px; /* 图片缩小 */
+            width: 150px;
             display: block;
-            margin: 20px auto; /* 图片居中 */
+            margin: 20px auto;
         }
 
-        /* 右侧表单容器样式 */
         .form-container {
             background: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            width: 500px; /* 增加宽度 */
+            width: 500px;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -110,7 +103,6 @@
             cursor: pointer;
         }
 
-        /* 整体内容容器样式 */
         .content-container {
             display: flex;
             justify-content: space-around;
@@ -120,15 +112,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* 修改图片大小统一 */
         .content-container img {
             width: 100%;
             height: auto;
-            max-width: 300px; /* 统一设置图片的最大宽度 */
+            max-width: 300px;
             margin-bottom: 20px;
         }
 
-        /* 业务流程部分样式优化 */
         .business-process {
             background-color: #f9f9f9;
             padding: 30px;
@@ -139,7 +129,7 @@
         .business-process h1 {
             text-align: center;
             margin-bottom: 30px;
-            font-family: "Georgia", serif; /* 优雅衬线字体 */
+            font-family: "Georgia", serif;
         }
 
         .business-process .column {
@@ -147,7 +137,6 @@
             margin-bottom: 20px;
         }
 
-        /* 美化表单字段 */
         .form-row {
             display: flex;
             justify-content: space-between;
@@ -158,89 +147,71 @@
             flex: 1;
         }
 
-        /* 第二个表单透明框样式 */
         .transparent-box {
-            background: rgba(255, 255, 255, 0.6); /* 半透明背景 */
-            border: 2px solid rgba(0, 0, 0, 0.1); /* 边框 */
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px solid rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             padding: 20px;
-            width: 500px; /* 和左侧保持对称 */
+            width: 500px;
             margin: 0 auto;
         }
 
-        /* 标题和正文的字体样式优化 */
         h1 {
-            font-family: "Georgia", serif; /* 优雅衬线字体 */
+            font-family: "Georgia", serif;
             font-size: 36px;
             margin-bottom: 20px;
         }
 
         h2 {
-            font-family: "Georgia", serif; /* 优雅衬线字体 */
+            font-family: "Georgia", serif;
             font-size: 28px;
             margin-top: 20px;
         }
 
         p {
-            font-family: "Arial", sans-serif; /* 现代无衬线字体 */
+            font-family: "Arial", sans-serif;
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
 
         @media (max-width: 768px) {
-        /* 将导航栏链接垂直排列 */
-        .navbar a {
-            float: none;
-            text-align: left;
-            padding: 10px;
+            .navbar a {
+                float: none;
+                text-align: left;
+                padding: 10px;
+            }
+
+            .hero-section {
+                height: auto;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .info-box,
+            .form-container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .transparent-box {
+                width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
         }
-
-        /* 调整 hero-section 高度，避免内容被挤压 */
-        .hero-section {
-            height: auto;
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        /* 调整 info-box 和 form-container 的宽度，确保在移动设备上不溢出 */
-        .info-box,
-        .form-container {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        /* 调整透明框宽度以适应手机屏幕 */
-        .transparent-box {
-            width: 100%;
-        }
-
-        /* 调整文字和表单字段的间距和布局 */
-        .form-row {
-            flex-direction: column;
-            gap: 0;
-        }
-    }
-
-    /* 调整图片大小 */
-    .hero-section {
-        background-size: contain;
-    }
-
-    .info-box img, 
-    .content-container img {
-        max-width: 100%;
-        height: auto;
-    }
     </style>
 </head>
 
 <body>
-<!-- Contact Us Header Style Section -->
-<div style="background-color: #333; color: white; text-align: center; padding: 10px 0; font-family: Arial, sans-serif; font-size: 16px; width: 100%; position: relative; top: 0;">
-    <p style="margin: 0;">Custom Service: <a href="tel:3157061444" style="color: #00ffcc; text-decoration: none;">(315) 706-1444</a></p>
-</div>
 
+    <!-- Contact Us Header Style Section -->
+    <div style="background-color: #333; color: white; text-align: center; padding: 10px 0; font-family: Arial, sans-serif; font-size: 16px; width: 100%; position: relative; top: 0;">
+        <p style="margin: 0;">Custom Service: <a href="tel:3157061444" style="color: #00ffcc; text-decoration: none;">(315) 706-1444</a></p>
+    </div>
 
     <!-- Hero 区块 -->
     <div class="hero-section">
@@ -258,7 +229,7 @@
         <!-- 右侧表单容器 -->
         <div class="form-container">
             <h2>Get A Fair Offer For Your Home in 30 Minutes or Less!</h2>
-            <form id="cash-offer-form" action="https://script.google.com/macros/s/AKfycbx-6ibK2w7zToATKlgHC5oQBMnvqIR28agvShOfmhqavfGVtQIUWyQ2QL0c1E24pdGF-Q/exec" method="POST">
+            <form id="cash-offer-form" action="https://script.google.com/macros/s/AKfycbx-6ibK2w7zToATKlgHC5oQBMnvqIR28agvShOfmhqavfGVtQIUWyQ2QL0c1E24pdGF-Q/exec" method="POST" onsubmit="return redirectThankYou();">
                 <div class="form-row">
                     <div class="col">
                         <input type="text" id="first-name" name="first-name" placeholder="First Name*" required>
@@ -267,10 +238,8 @@
                         <input type="text" id="last-name" name="last-name" placeholder="Last Name*" required>
                     </div>
                 </div>
-            
                 <input type="text" id="address" name="address" placeholder="What is the Property Address?*" required>
                 <input type="text" id="address-line-2" name="address-line-2" placeholder="Address Line 2">
-            
                 <div class="form-row">
                     <div class="col">
                         <input type="text" id="city" name="city" placeholder="City" required>
@@ -284,29 +253,23 @@
                         </select>
                     </div>
                 </div>
-            
                 <input type="text" id="zip" name="zip" placeholder="ZIP Code" required>
                 <input type="text" id="phone" name="phone" placeholder="What is Your Cell # Please?*" required>
                 <input type="email" id="email" name="email" placeholder="What Is Your Email?*" required>
-            
                 <button type="submit" class="btn btn-primary">Yes, I'd Like To Sell My House!</button>
             </form>
         </div>
-
-        <form id="cash-offer-form" action="https://script.google.com/macros/s/AKfycbySjKHae9zsFpckQ3vIurjWqBP3Eb4U746PIuCuVSfSTLbOaX85yBdtMDx-M56vibKCPQ/exec" method="POST" onsubmit="return redirectThankYou();">
-            <!-- 你的表单内容 -->
-        </form>
-        
-        <script>
-          function redirectThankYou() {
-              // 表单提交成功后等待一段时间，然后重定向到感谢页面
-              setTimeout(function() {
-                  window.location.href = "https://hk971.github.io/101quickcashhouse/thankyou.html";
-              }, 1000); // 1秒后重定向
-              return true; // 允许表单提交
-          }
-        </script>
     </div>
+
+    <script>
+        function redirectThankYou() {
+            // 表单提交成功后等待一段时间，然后重定向到感谢页面
+            setTimeout(function () {
+                window.location.href = "https://hk971.github.io/101quickcashhouse/thankyou.html";
+            }, 1000); // 1秒后重定向
+            return true; // 允许表单提交
+        }
+    </script>
 
     <!-- 新增的内容 -->
     <div class="content-container">
@@ -327,8 +290,6 @@
             <p>Skip the headaches and costs of repairing your property. We’ll purchase your house in its current condition, without requiring you to make any fixes. You don’t even need to clean the place.</p>
 
             <p>If you’re looking to sell your Maryland property, we’re ready to help. Contact us today!</p>
-
-            <p>We eliminate the hassle and uncertainty of the traditional selling process. After deducting agent fees and making necessary repairs, you may not even end up with as much as you hoped. Let us offer you a simpler alternative!</p>
 
             <h2>HOW IT WORKS</h2>
             <p>Discover a hassle-free way to sell your house with us.</p>
@@ -358,7 +319,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
 
 </body>
 
