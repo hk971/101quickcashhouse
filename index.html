@@ -174,65 +174,78 @@
 
 
 /* Sticky Header 开始 */
+/* Sticky Header 开始 */
+/* Sticky Header 样式调整 */
 .sticky-header { 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 70px; /* 设置头部固定高度 */
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 300px; /* Adjusts padding to match existing header spacing */
-    z-index: 1000; /* Ensures it stays on top */
+    padding: 10px 50px; /* 调整边距适配不同屏幕 */
+    z-index: 1000; 
 }
 
 .sticky-logo img {
-    height: 80px; /* Increased height for larger logo */
+    height: 60px; /* 调整logo大小适应移动端 */
 }
 
-.sticky-call-button {
-    background-color: #31a899;
-    color: white;
-    padding: 8px 16px;
+/* 联系方式部分 */
+.contact-info {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.phone-link, .text-link {
+    color: #31a899;
+    text-decoration: none;
     font-weight: bold;
-    border-radius: 20px;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
-.sticky-call-button:hover {
-    background-color: #28a78a;
-    text-decoration: none;
+.phone-link i {
+    margin-right: 5px;
 }
 
-/* Offset body content to avoid overlap with sticky header */
-body {
-    padding-top: 100px; /* Adjust based on sticky header height */
+.divider {
+    margin: 0 10px;
+    font-weight: bold;
+    color: #000;
 }
 
-
-/* Mobile adjustments */
+/* 响应式调整 */
 @media (max-width: 768px) {
     .sticky-header {
-        padding: 10px 20px; /* Reduced padding for mobile */
-        flex-direction: row; /* Ensures elements are side-by-side */
-        justify-content: space-between; /* Keeps items side-by-side */
+        padding: 10px 20px; /* 减小边距适配小屏幕 */
+        flex-direction: row;
+        
     }
-    
+
     .sticky-logo img {
-        height: 50px; /* Smaller logo for mobile */
+        height: 40px; /* 减小移动端 logo 大小 */
     }
-    
-    .sticky-call-button {
-        padding: 6px 12px; /* Adjust button padding for mobile */
-        font-size: 14px; /* Smaller font for the button */
+
+    .contact-info {
+        font-size: 16px;
+        flex-wrap: wrap;
+        gap: 5px;
     }
-    
-    body {
-        padding-top: 70px; /* Adjust body offset for mobile header height */
+
+    .divider {
+        display: none; /* 移动端去掉分隔符减少空间占用 */
     }
 }
+
+/* Sticky Header 结束 */
+
  /* sticky head结束 */
 
 
@@ -300,6 +313,7 @@ body {
             font-family: Arial, sans-serif;
             margin: 0;
             color: #333;
+            padding-top: 80px; /* 根据 sticky-header 的高度进行调整 */
         }
 
         .hero-section {
@@ -1141,12 +1155,21 @@ s0.parentNode.insertBefore(s1,s0);
 <!-- 顶部栏 -->
 
 <!-- Sticky Header -->
+<!-- Sticky Header -->
+<!-- Sticky Header -->
 <div class="sticky-header">
     <div class="sticky-logo">
         <img src="photo/quickclosehomebuyer_logo.png" alt="Logo">
     </div>
-    <a href="tel:3017201881" class="sticky-call-button">Call Now! (301) 720-1881</a>
+    <div class="contact-info">
+        <a href="tel:3017201881" class="phone-link">
+            <i class="fa fa-phone"></i> (301) 720-1881
+        </a>
+        <span class="divider">|</span>
+        <a href="sms:+13017201881" class="text-link">Send Text</a>
+    </div>
 </div>
+
     <!-- 主标题和描述 -->
     <div class="hero-section">
         <div class="text-container">
