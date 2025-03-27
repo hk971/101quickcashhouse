@@ -78,22 +78,50 @@
 
 /* Mobile adjustments for How We Buy Houses section */
 @media (max-width: 768px) {
-    .how-we-buy {
-        padding: 40px 10px; /* Reduce padding for smaller screens */
+    .sticky-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        width: 100%;
+        height: auto;
+        flex-wrap: nowrap;
     }
 
-    .how-we-buy h2 {
-        font-size: 24px;
+    .sticky-logo img {
+        height: 50px;
     }
 
-    .how-we-buy p em {
-        font-size: 16px;
+    .contact-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        flex: 1;
+        text-align: right;
     }
 
-    .how-we-buy .content p {
-        font-size: 16px;
+    .contact-info a {
+        color: #31a899;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .divider {
+        display: inline;
+        color: #ccc;
+    }
+
+    .hero-section {
+        padding-top: 100px;
     }
 }
+
 
 
 
@@ -226,6 +254,7 @@
     .sticky-header {
         padding: 10px 20px; /* 减小边距适配小屏幕 */
         flex-direction: row;
+        min-height: 85px; /* 或你觉得合适的高度 */
         
     }
 
@@ -1165,6 +1194,8 @@ s0.parentNode.insertBefore(s1,s0);
         <a href="tel:3017201881" class="phone-link">
             <i class="fa fa-phone"></i> (301) 720-1881
         </a>
+        <span class="divider">|</span>
+        <a href="mailto:Data@QuickCloseDMV.com" class="text-link">Data@QuickCloseDMV.com</a>
         <span class="divider">|</span>
         <a href="sms:+13017201881" class="text-link">Send Text</a>
     </div>
